@@ -1,0 +1,135 @@
+body {
+    font-family: 'Lucida Sans Unicode', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+    line-height: 2.0;
+    position: relative;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+section > h2 {
+    margin-bottom: 10px;
+    &:hover {
+        color: #666;
+    }
+}
+
+section > p,
+section > ol,
+section > ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+section > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+video {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 2.5%;
+    flex: 1;
+    }
+    
+    video:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);/* I used GPT to get the star shape :p */
+    animation: twinkle 2s infinite;
+    top: 0;
+    left: 0;
+}
+
+header, section {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Styles for small screens */
+@media (max-width: 600px) {
+    header, section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    ul, ol {
+        padding-left: 20px;
+    }
+    section > div {
+        flex-direction: column;
+    }
+}
+
+/* Styles for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header, section {
+        padding: 15px;
+        margin: 8px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    ul, ol {
+        padding-left: 30px;
+    }
+}
+
+/* Styles for large screens (desktop) */
+@media (min-width: 1025px) {
+    header, section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    ul, ol {
+        padding-left: 40px;
+    }
+}
